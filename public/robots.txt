@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wifi-qr-generator.onrender.com/sitemap.xml
