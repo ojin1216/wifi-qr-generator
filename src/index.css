@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.generate-btn:active {
+  transform: translateY(0);
+}
+
+.qr-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.qr-container {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.qr-wrapper {
+  display: inline-block;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wifi-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.wifi-info p {
+  color: #555;
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.nudge-box {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 2px dashed #f39c12;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.printer-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.nudge-box p {
+  color: #856404;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.nudge-sub {
+  font-weight: 400 !important;
+  font-size: 0.9rem !important;
+  margin-top: 8px !important;
+  opacity: 0.85;
+}
+
+.print-btn {
+  padding: 14px 30px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.print-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+/* 인쇄 스타일 */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .container {
+    box-shadow: none;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  form,
+  .generate-btn,
+  .print-btn,
+  .nudge-box,
+  h1,
+  .subtitle {
+    display: none !important;
+  }
+
+  .qr-section {
+    margin-top: 0;
+  }
+
+  .qr-container {
+    border: 3px solid #333;
+    padding: 40px;
+    page-break-inside: avoid;
+  }
+
+  .qr-wrapper {
+    box-shadow: none;
+  }
+
+  .wifi-info {
+    margin-top: 30px;
+  }
+
+  .wifi-info p {
+    font-size: 1.2rem;
+    color: #000;
+  }
+}
